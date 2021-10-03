@@ -23,10 +23,10 @@ pipeline {
                steps {
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                
-                  // docker login -u ${USERNAME}  -p ${PASSWORD}
-                  // docker push ahmedarafat10/django_project:latest
+                  
                 sh """
-               
+                   docker login -u ${USERNAME}  -p ${PASSWORD}
+                   docker push ahmedarafat10/django_project:latest
                 """
                }
            }
@@ -35,7 +35,7 @@ pipeline {
          stage('Depoly') {
             steps {
                    sh """
-                docker run -d -p 3000:8000 ahmedarafat10/django_project:latest
+                docker run -d -p 90:8000 ahmedarafat10/django_project:latest
                 """
                 }
         }   
