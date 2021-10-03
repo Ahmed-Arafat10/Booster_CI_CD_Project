@@ -1,5 +1,5 @@
 FROM ubuntu
-COPY simpleApp /root/Jenkins/Django
+COPY Booster_CI_CD_Project /root/Jenkins/Django
 RUN apt-get -y update
 RUN apt-get install python3 -y
 RUN apt-get -y install python3-pip
