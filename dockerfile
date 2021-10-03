@@ -1,4 +1,6 @@
 FROM ubuntu
+RUN pwd
+RUN ls 
 COPY simpleApp /root/Jenkins/Django
 RUN apt-get -y update
 RUN apt-get install python3 -y
