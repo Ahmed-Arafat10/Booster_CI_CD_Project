@@ -41,9 +41,6 @@ pipeline {
         }   
       
          stage('Notification') {
-            steps {
-        
-        }
                  post{
                       success{
                         slackSend(color:"#b1ff00",message: "pipeline is Deployed successfully :)")//Green
