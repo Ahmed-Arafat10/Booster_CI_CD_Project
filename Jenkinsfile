@@ -33,12 +33,9 @@ pipeline {
          stage('Depoly') {
             steps {
                    sh """
-
-                docker run -d -p 3000:3000 ahmedarafat10/django_project:latest
-                
+                docker run -d -p 3000:8000 ahmedarafat10/django_project:latest
                 """
                 }
-        
         }   
       
          stage('Notification') {
