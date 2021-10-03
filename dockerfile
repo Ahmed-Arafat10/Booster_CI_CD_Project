@@ -7,7 +7,7 @@ RUN ls
 RUN apt-get -y update
 RUN apt-get install python3 -y
 RUN apt-get -y install python3-pip
-WORKDIR /root/Jenkins/Django/simpleApp
+WORKDIR /root/Jenkins/
 RUN pwd && ls
 RUN pip install -r requirements.txt
 # RUN ls /root/Jenkins/Django
