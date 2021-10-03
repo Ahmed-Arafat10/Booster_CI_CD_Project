@@ -42,16 +42,16 @@ pipeline {
       
          stage('Notification') {
             steps {
-                post{
+        
+        }
+                 post{
                       success{
                         slackSend(color:"#b1ff00",message: "pipeline is Deployed successfully :)")//Green
                         }
                         // failure not for syntax errors in scrip , its as for example $ docker command in pipeline that dont installed in it docker CLI
                         failure{
                         slackSend(color:"#ff0000",message: "pipeline failed to be debloyed :( ")//Red
-                        }
-        }
-          
+                        } 
         }
         
         }   
