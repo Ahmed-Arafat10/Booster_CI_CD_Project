@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
+               git 'https://github.com/Ahmed-Arafat10/Booster_CI_CD_Project.git'
                   }
         
                               }
