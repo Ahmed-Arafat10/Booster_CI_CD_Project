@@ -1,8 +1,7 @@
 FROM ubuntu
-COPY simpleApp /root/Jenkins/
+COPY simpleApp /root/Jenkins/simpleApp
 COPY Meta /root/Jenkins/
 WORKDIR /root/Jenkins/
-RUN pwd
 RUN ls 
 RUN apt-get -y update
 RUN apt-get install python3 -y
